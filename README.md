@@ -46,3 +46,17 @@ You can specify `PORT` for both: development and production server (default to `
 PORT=5000 npm start
 PORT=8081 npm run start:dev
 ```
+
+## Testing
+
+Run tests
+
+```
+npm test
+```
+
+Run test and watch
+
+```
+npm test -- --watch
+```
