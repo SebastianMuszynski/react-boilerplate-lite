@@ -5,7 +5,7 @@ const path = require("path");
 
 module.exports = {
   entry: {
-    app: [path.resolve("src/index.jsx")],
+    app: [path.resolve("src/index.tsx")],
   },
 
   output: {
@@ -16,7 +16,7 @@ module.exports = {
   },
 
   resolve: {
-    extensions: [".js", ".jsx"],
+    extensions: [".ts", ".tsx", ".js", ".jsx"],
   },
 
   plugins: [
@@ -26,7 +26,7 @@ module.exports = {
 
   module: {
     rules: [
-      { test: /\.jsx?$/, exclude: /node_modules/, use: "babel-loader" },
+      { test: /\.tsx?$/, exclude: /node_modules/, use: ["babel-loader", "awesome-typescript-loader"] },
     ],
   },
 };

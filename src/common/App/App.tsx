@@ -1,7 +1,11 @@
-import React, { Component } from "react";
-import cls from "./App.css";
+import * as React from "react";
+const cls = require("./App.css");
 
-class App extends Component {
+interface AppStateType {
+  text: string;
+}
+
+class App extends React.Component<{}, AppStateType> {
   state = {
     text: "Hello World!",
   };
